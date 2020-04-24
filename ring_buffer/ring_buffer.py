@@ -35,11 +35,7 @@ class RingBuffer:
         list_buffer_contents = []
 
         # TODO: Your code here
-        node = None
-        #not at end of list add to array
-        while node != None:
-            list_buffer_contents.append(node.value)
-            node = node.next
+
 
         return list_buffer_contents
 

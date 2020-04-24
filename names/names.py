@@ -31,7 +31,9 @@ for name in names_1:
 for name in names_2:
     if fitted_tree.contains(name):
         duplicates.append(name)
-#starter code runtime: 5.622673988342285 seconds
+
+
+#starter code runtime: 5.622673988342285 seconds O(n^2)
 #my runtime: 0.14391708374023438 seconds
 
 my_end_time = time.time()

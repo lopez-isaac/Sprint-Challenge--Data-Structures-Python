@@ -45,7 +45,7 @@ class LinkedList:
         # if we've gotten here, then the target node isn't in our list
         return False
 
-    def reverse_list(self, node, prev):
+        """def reverse_list(self, node, prev):
         prev = None
         current = self.head
         while (current is not None):
@@ -53,7 +53,24 @@ class LinkedList:
             current.next_node = prev
             prev = current
             current = next
-        self.head = prev
+        self.head = prev"""
+
+    def reverse_list(self, node, prev):
+        #base case: once node is empty go back up the stacks
+        #if node is empty then we are at end
+        if node == None:
+            #take the current head and override prev with it
+            self.head = prev
+        #starting point of recurrsion
+        else:
+            # switching next and prev
+            next = node.next_node
+            node.next_node = prev
+            # call the switch again 
+            self.reverse_list(next, node)
+
+
+
 
 
 
