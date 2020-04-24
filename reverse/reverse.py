@@ -59,14 +59,14 @@ class LinkedList:
         #base case: once node is empty go back up the stacks
         #if node is empty then we are at end
         if node == None:
-            #take the current head and override prev with it
+            #take the current head and override 
             self.head = prev
         #starting point of recurrsion
         else:
             # switching next and prev
             next = node.next_node
             node.next_node = prev
-            # call the switch again 
+            # call the switch again
             self.reverse_list(next, node)
 
 
